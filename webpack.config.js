@@ -1,19 +1,20 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
- 
+
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname + "/build")
+    path: path.resolve(__dirname + "/build"),
   },
   devServer: {
     port: 3001,
-    proxy : {
-        context :['/home','/api','/user'],
-        target : 'http://localhost:8001',
-    }
+    proxy: {
+      context: ["/home", "/api", "/user"],
+      target: "http://localhost:8001",
+    },
+    historyApiFallback: true,
   },
   mode: "development",
   module: {
@@ -21,35 +22,35 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: "/node_modules",
-        use: ['babel-loader'],
+        use: ["babel-loader"],
       },
       {
         test: /\.html$/,
         use: [
           {
             loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
+            options: { minimize: true },
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      }
-    ]
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: 'index.html'
+      template: "./src/index.html",
+      filename: "index.html",
     }),
-    new MiniCssExtractPlugin({})
+    new MiniCssExtractPlugin({}),
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.json', 'css'],
+    extensions: [".js", ".jsx", ".json", "css"],
     alias: {
-      '@components': path.resolve(__dirname + "/src/components"),
-      '@css': path.resolve(__dirname + "/public/css")
-    }
-  }
+      "@components": path.resolve(__dirname + "/src/components"),
+      "@css": path.resolve(__dirname + "/public/css"),
+    },
+  },
 };

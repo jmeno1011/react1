@@ -1,12 +1,26 @@
 const express = require("express");
+const session = require("express-session");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
 const app = express();
+
 const api = require("./routes/api");
 const home = require("./routes/home");
-const user = require("./routes/route");
-const cors = require("cors");
+const user = require("./routes/account");
+
 const PORT = process.env.PORT || 8001;
 
 app.use(cors());
+app.use(
+  session({
+    secret: "tlzmflt",
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use("/home", home);
 app.use("/api", api);

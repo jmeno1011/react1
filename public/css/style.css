@@ -231,14 +231,24 @@ fieldset {
   height: 126px;
   margin: 0 auto;
 }
+.errorAlert {
+  margin: 0;
+  font-size: 12px;
+  padding: 8px 0 4px 10px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #f4492e;
+  text-align: left;
+}
 .login-footer {
   overflow: hidden;
   padding: 17px 0 97px;
   margin-top: 44px;
   border-top: 1px solid #ebebeb;
   background: #fff;
+  font-size: 12px;
 }
-.link-corp {
+.link_corp {
   display: inline-block;
   color: #7f7f7f;
   vertical-align: top;
@@ -254,7 +264,7 @@ fieldset {
   text-indent: -9999px;
   vertical-align: top;
 }
-.link-custom {
+.link_custom {
   display: inline-block;
   color: #7f7f7f;
   vertical-align: top;

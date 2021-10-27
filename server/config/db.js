@@ -8,11 +8,6 @@ const mysql = require("mysql");
 //   //   port : process.env.DB_PORT,
 // });
 
-const db = mysql.createPool({
-    host: 'meno-db.czaumbq0dnb0.ap-northeast-2.rds.amazonaws.com',
-    user: 'meno1011',
-    password: 'Zxc12512412!',
-    database: 'maintest'
-})
+const db = mysql.createPool({});
 
 module.exports = db;

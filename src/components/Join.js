@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import Header from "./header/Header";
 function Join() {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
@@ -40,50 +41,55 @@ function Join() {
       })
       .catch((e) => console.log("error : ", e));
   };
-//   useEffect(() => {
-//     axios
-//       .get("/user/join")
-//       .then((res) => console.log(res))
-//       .catch();
-//   }, []);
+
   return (
     <div>
-      <form onSubmit={onSubmitHandler}>
-        <h1>Join</h1>
-        <div>
-          id : <input type="text" name="id" velue={id} onChange={onChangeId} />
-        </div>
-        <div>
-          pw :
-          <input type="password" name="pw" velue={pw} onChange={onChangePw} />
-        </div>
-        <div>
-          pw확인 :
-          <input
-            type="password"
-            name="pw2"
-            velue={pw2}
-            onChange={onChangePw2}
-          />
-        </div>
-        <div>
-          name :
-          <input type="text" name="name" velue={name} onChange={onChangeName} />
-        </div>
-        <div>
-          email :
-          <input
-            type="email"
-            name="email"
-            velue={email}
-            onChange={onChangeEmail}
-          />
-        </div>
-        <div>
-          {/* <button></button> */}
-          <button type="submit">signup</button>
-        </div>
-      </form>
+      <Header className="login-header" />
+      <hr className="hide" />
+      <div className="middle">
+        <form onSubmit={onSubmitHandler}>
+          <h1>Join</h1>
+          <div>
+            id :{" "}
+            <input type="text" name="id" velue={id} onChange={onChangeId} />
+          </div>
+          <div>
+            pw :
+            <input type="password" name="pw" velue={pw} onChange={onChangePw} />
+          </div>
+          <div>
+            pw확인 :
+            <input
+              type="password"
+              name="pw2"
+              velue={pw2}
+              onChange={onChangePw2}
+            />
+          </div>
+          <div>
+            name :
+            <input
+              type="text"
+              name="name"
+              velue={name}
+              onChange={onChangeName}
+            />
+          </div>
+          <div>
+            email :
+            <input
+              type="email"
+              name="email"
+              velue={email}
+              onChange={onChangeEmail}
+            />
+          </div>
+          <div>
+            {/* <button></button> */}
+            <button type="submit">signup</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
