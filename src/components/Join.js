@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import Login_Footer from "./footer/Login_Footer";
 import Header from "./header/Header";
 function Join() {
   const [id, setId] = useState("");
@@ -43,7 +44,7 @@ function Join() {
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <Header className="login-header" />
       <hr className="hide" />
       <div className="middle">
@@ -90,6 +91,7 @@ function Join() {
           </div>
         </form>
       </div>
+      <Login_Footer />
     </div>
   );
 }

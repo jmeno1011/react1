@@ -40,6 +40,13 @@ body {
 }
 
 #root {
+  /* max-width: 700px;
+  min-height: 100%;
+  margin: 0 auto;
+  background: #fff;
+  text-align: center; */
+}
+.wrapper {
   max-width: 700px;
   min-height: 100%;
   margin: 0 auto;

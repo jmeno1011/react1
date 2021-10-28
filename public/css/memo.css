@@ -1,0 +1,173 @@
+.npm-login {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 30em;
+  /* min-height: 100vh; */
+  position: relative;
+}
+.header-logo {
+  width: 188px;
+  height: 80px;
+  margin: 90px auto 20px;
+  text-align: center;
+  background: url("../img/memo_Snap_ITC-removebg-preview1.png") 0 0 no-repeat;
+  background-size: contain;
+}
+.npm-login1 {
+  margin-bottom: 160px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.login-body {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.npm-form {
+  margin: 0;
+}
+.npm-title {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-top: 0;
+  padding-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-family: "Source Sans Pro", "Lucida Grande", sans-serif;
+}
+.npm-label {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 600;
+  display: block;
+  font-family: "Source Sans Pro", "Lucida Grande", sans-serif;
+}
+.npm-log-input {
+  height: 38px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  resize: vertical;
+  background: white;
+  /* margin-left: 0; */
+  margin: 0.5rem 0;
+  /* margin: 0.5rem; */
+  /* padding-top: 1rem;
+  padding-bottom: 1rem; */
+  /* padding-right: 0.5rem;
+  padding-left: 0.5rem; */
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  width: 100%;
+  border-radius: 0.25rem;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  font-family: "Source Sans Pro", "Lucida Grande", sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+}
+.forgot {
+  margin-top: 0.5rem;
+  float: right;
+}
+.npm-log-btn {
+  background-color: #fff;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(17, 17, 17, 0.04) 100%
+  );
+  border: 1px solid rgba(22, 22, 22, 0.2);
+  color: #444;
+  letter-spacing: 0.25px;
+  font-size: 1rem;
+  text-align: center;
+  /* margin-left: 0; */
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  font-family: "Source Sans Pro", "Lucida Grande", sans-serif;
+}
+.npm-log-a {
+  background-color: transparent;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  display: block;
+  font-family: "Source Sans Pro", "Lucida Grande", sans-serif;
+}
+.nav1 {
+  padding: 8px 0;
+  border-width: 10px 0 0;
+  border-top-style: solid;
+  border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
+}
+.nav1-in,
+.nav2-in {
+  display: flex;
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.nav1-text {
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.015625em;
+}
+.nt-left {
+  padding-right: 1rem;
+}
+.nt-right {
+  font-family: "Poppins";
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.875rem;
+  margin-right: 2rem;
+}
+.nav1-nav {
+  width: auto;
+  text-align: right;
+}
+.nav-in-list {
+  display: flex;
+  margin: 0;
+}
+.in-li {
+  padding: 3px;
+}
+.in-a {
+  display: block;
+  padding: 10px;
+  position: relative;
+  font-family: "Poppins";
+  color: #000;
+  letter-spacing: 0.015625em;
+  font-size: 0.875rem;
+}
+.nav2 {
+  padding: 10px 0;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-top-style: solid;
+  border-top-width: 1px;
+}

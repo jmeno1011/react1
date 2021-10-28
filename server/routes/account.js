@@ -34,6 +34,7 @@ route.post("/login", (req, res) => {
                 }
               });
               res.send(result[0]);
+              // res.redirect("/");
             }
           } else {
             console.log("err: ", err);

@@ -3,6 +3,7 @@ import axios from "axios";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
 import Header from "./header/Header";
+import Login_Footer from "./footer/Login_Footer";
 
 function Login() {
   const [inputId, setInputId] = useState("");
@@ -39,32 +40,29 @@ function Login() {
         } else if (res.data.err === "pw") {
           alert(res.data.msg);
         } else {
+          console.log(res.data);
           history.push("/Memo");
-          // document.location.href = "/Dashboard";
+          // document.location.href = "/Memo";
         }
       });
     }
   };
-  useEffect(
-    () => {
-      axios
-        .get("/user/login")
-        .then((res) => console.log("res : ", res))
-        .catch();
-    },
-    // 페이지 호출 후 처음 한번만 호출될 수 있도록 [] 추가
-    []
-  );
+  const login = async () => {
+    const res = axios.get("/user/login");
+  };
+  useEffect(() => {
+    login();
+  }, []);
 
   return (
-    <>
+    <div className="wrapper">
       <Header className="login-header" />
       <hr className="hide" />
       <div className="middle">
         <div className="login_Section">
           <div id="loginFormDiv" className="login_default">
             <div className="login_change">
-              <a className="link_change" href="">
+              <a className="link_change" href="/Login">
                 <span className="ico_change">
                   <FaRegPaperPlane />
                 </span>
@@ -143,7 +141,8 @@ function Login() {
           </a>
         </div>
       </div>
-    </>
+      <Login_Footer />
+    </div>
   );
 }
 export default Login;
