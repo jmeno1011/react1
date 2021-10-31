@@ -1,6 +1,12 @@
 import React from "react";
+import { useHistory, useLocation } from "react-router";
+import ChartArea from "./chart/ChartArea";
+import Logout from "./Logout";
 
+// const Memo = ({ history }) => {
 const Memo = () => {
+  let history = useHistory();
+  console.log("history : ", history);
   return (
     <div className="memo-header">
       <div className="nav1">
@@ -30,8 +36,10 @@ const Memo = () => {
       <div className="nav2">
         <div className="nav2-in">
           <h1>nav 2</h1>
+          <Logout history={history} />
         </div>
       </div>
+      <ChartArea />
     </div>
   );
 };

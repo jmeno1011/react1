@@ -128,6 +128,9 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.nav2-in {
+  justify-content: space-between;
+}
 .nav1-text {
   font-size: 20px;
   line-height: 160%;
@@ -170,4 +173,12 @@
   border-color: rgba(0, 0, 0, 0.1);
   border-top-style: solid;
   border-top-width: 1px;
+}
+.chart-area {
+  padding: 10px 10rem;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 100vh;
+  display: flex;
 }

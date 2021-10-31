@@ -2,8 +2,9 @@ const express = require("express");
 const route = express.Router();
 const db = require("../config/db");
 
-route.get("/", (req, res) => {
-  console.log(`req : ${req}, res: ${res}`);
+route.get("/on", (req, res) => {
+  const id = req.session.user_id;
+  res.send(id);
 });
 
 route.get("/login", (req, res) => {
@@ -63,6 +64,14 @@ route.post("/join", (req, res) => {
     console.log("저장되었습니다.");
     // res.redirect('/');
   });
+});
+
+route.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.clearCookie("sid");
+  // const id = req.session.user_id;
+  // res.send(id);
+  res.redirect("/");
 });
 
 module.exports = route;

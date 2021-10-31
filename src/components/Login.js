@@ -40,9 +40,7 @@ function Login() {
         } else if (res.data.err === "pw") {
           alert(res.data.msg);
         } else {
-          console.log(res.data);
           history.push("/Memo");
-          // document.location.href = "/Memo";
         }
       });
     }
@@ -62,12 +60,12 @@ function Login() {
         <div className="login_Section">
           <div id="loginFormDiv" className="login_default">
             <div className="login_change">
-              <a className="link_change" href="/Login">
+              <Link className="link_change" to="/Login">
                 <span className="ico_change">
                   <FaRegPaperPlane />
                 </span>
                 다른 방법으로 로그인
-              </a>
+              </Link>
             </div>
             <form id="loginForm" method="post">
               <fieldset>
